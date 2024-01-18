@@ -16,14 +16,14 @@ NameWhitelist provides a solution for those who want to keep their server offlin
 ## Highlights and Cautions
 
 Some highlights of NameWhitelist includes:
-- Totally based on simple string things. Case insensitve as usual.
-- Takes effect instantly. There's no reason for string process to drag.
-- Open source, thus extensible. As you can see, the code is quite simple, thanks to Architectury API. If something is in your mind, like "auto fetching the UUID from MOJANG server and write it into the file" or whatever, just fork the repo, make your modification, and get your own tailored (by yourself) whitelist system!
+- Totally based on simple string things. Simple, no plot, crystal clear. *CASE-INSENSITIVE*.
+- Takes effect instantly. I mean, there can't be a reason for some string process to drag, right?
+- Open source, thus extensible. As you can see, the code is quite simple, thanks to Architectury API. If something is in your mind, like "auto fetching the UUID from MOJANG server and write it into the file", just fork the repo, make your modification, and get your own tailored (by yourself) whitelist system!
 
 > [!CAUTION]
 > What NameWhitelist maintain is just a simple plain text file filled with the names of players, separated by returns `\n`. For now, it won't check the validity of the names (this does not hurt though, as it only plays when some player with of course valid username is trying to join the server).
 >
-> Most importantly, the names are not bound to the player's IP or device. That is, they will **NOT** be updated automatically after player changed his/her name. So manually removing the old name and adding the new name is required when something like this happens.
+> Most importantly, as the list is static and no UUID information is recorded, the names will **NOT** be updated automatically after player changed his/her name. So manually removing the old name and adding the new name is required when something like this happens.
 
 ## Version & Dependency
 
