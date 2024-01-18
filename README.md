@@ -18,3 +18,6 @@ NameWhitelist provides a solution for those who want to keep their server offlin
 - Java 1.16.5+
   - Both Forge and Fabric is supported (the full release will come out before Jan 22, 2024)
 - Dependency: [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api)
+
+## License
+MIT
