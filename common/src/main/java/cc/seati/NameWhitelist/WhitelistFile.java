@@ -24,6 +24,11 @@ public class WhitelistFile {
         }
     }
 
+    public static void reload() {
+        file = new File("./" + filename);
+        init();
+    }
+
     public static List<String> getPlayers() {
         ArrayList<String> result = new ArrayList<>();
         try (BufferedReader reader = Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8)) {
