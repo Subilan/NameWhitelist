@@ -1,6 +1,6 @@
 # NameWhitelist
 
-**Name Whitelist** is the _super-simplified_ version of the vanilla whitelist. It checks if the name of the player who trying to join the server is on the list, and forcefully disconnect (like _kick_, or something) players not listed actively.
+**NameWhitelist** is the _super-simplified_ version of the vanilla whitelist. It checks if the name of the player who trying to join the server is on the list, and forcefully disconnect (like _kick_, or something) players not listed actively.
 
 ## Reason
 
