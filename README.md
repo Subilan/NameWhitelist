@@ -4,7 +4,7 @@
 
 ## Usage
 
-Turn on:
+### Initialization
 
 1. Put NameWhitelist and Architectury API jar file into `mods/`.
 2. Edit `server.properties`, turn the vanilla whitelist off. This is not required. Yoo can leave it on if you have some _special_ purpose ;)
@@ -12,14 +12,15 @@ Turn on:
 
 Players with names that are not listed in `name-whitelist.txt` will be actively disconnected once joined in the server. Theorectically, they won't even be able to see the appearance of the world.
 
-Turn off:
+### Turning Off
 
-Two ways, A and B.
+Three ways.
 - A) Remove NameWhitelist jar file from `mods/`. Restart the server.
 - B) Put "#disabled" in the first line of `name-whitelist.txt`. Execute `wl reload`.
 - C) Execute `wl disable` in game or console.
 
-Commands:
+### Commands
+
 - `wl add <PlayerNames...>` - Add player names to `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
 - `wl remove <PlayerNames...>` - Remove player names from  `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
 - `wl reload` - Reload. Read conteng of `name-whitelist.txt` again.
