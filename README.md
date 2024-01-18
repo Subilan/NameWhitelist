@@ -2,6 +2,30 @@
 
 **NameWhitelist** is the _super-simplified_ version of the vanilla whitelist. It checks if the name of the player who trying to join the server is on the list, and forcefully disconnect (like _kick_, or something) players not listed actively.
 
+## Usage
+
+Turn on:
+
+1. Put NameWhitelist and Architectury API jar file into `mods/`.
+2. Edit `server.properties`, turn the vanilla whitelist off. This is not required. Yoo can leave it on if you have some _special_ purpose ;)
+3. (Re)start server, ***OR***, manually create a file named `name-whitelist.txt` in the same directory as the vanilla whitelist, put the names in it, and (re)start the server.
+
+Players with names that are not listed in `name-whitelist.txt` will be actively disconnected once joined in the server. Theorectically, they won't even be able to see the appearance of the world.
+
+Turn off:
+
+Two ways, A and B.
+- A) Remove NameWhitelist jar file from `mods/`. Restart the server.
+- B) Put "#disabled" in the first line of `name-whitelist.txt`. Execute `wl reload`.
+- C) Execute `wl disable` in game or console.
+
+Commands:
+- `wl add <PlayerNames...>` - Add player names to `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
+- `wl remove <PlayerNames...>` - Remove player names from  `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
+- `wl reload` - Reload. Read conteng of `name-whitelist.txt` again.
+- `wl disable` - Disable whitelist.
+- `wl enable` - Enable whitelist.
+
 ## Reason
 
 It's known that the vanilla whitelist records both players' name and UUID, which may work perfectly on server with `online-mode` set to `true`. But things would get tricky when it comes to offline servers. The whole thing might not work at all.
