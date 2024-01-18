@@ -1,33 +1,33 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
-modId = "examplemod"
+modId = "namewhitelist"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Name Whitelist"
+authors = "Subilan"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+A simple whitelist based on just names.
 '''
 #logoFile = ""
 
-[[dependencies.examplemod]]
+[[dependencies.namewhitelist]]
 modId = "forge"
 mandatory = true
 versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.namewhitelist]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.16.5,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.namewhitelist]]
 modId = "architectury"
 mandatory = true
 versionRange = "[1.32.68,)"

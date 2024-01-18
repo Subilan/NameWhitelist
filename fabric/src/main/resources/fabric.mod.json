@@ -1,18 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "namewhitelist",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Name Whitelist",
+  "description": "A simple whitelist based on just names.",
   "authors": [
-    "Me!"
+    "Subilan"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/seatitanium/NameWhitelist",
+    "sources": "https://github.com/seatitanium/NameWhitelist"
   },
   "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
