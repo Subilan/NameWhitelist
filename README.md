@@ -4,15 +4,15 @@
 
 ## Usage
 
-### Initialization
+### For the First Time (Installation)
 
 1. Put NameWhitelist and Architectury API jar file into `mods/`.
 2. Edit `server.properties`, turn the vanilla whitelist off. This is not required. Yoo can leave it on if you have some _special_ purpose ;)
 3. (Re)start server, ***OR***, manually create a file named `name-whitelist.txt` in the same directory as the vanilla whitelist, put the names in it, and (re)start the server.
 
-Players with names that are not listed in `name-whitelist.txt` will be actively disconnected once joined in the server. Theorectically, they won't even be able to see the appearance of the world.
+If NameWhitelist is enabled, players with names that are not listed in `name-whitelist.txt` will be actively disconnected once joined in the server. Theorectically, they won't even be able to see the appearance of the world.
 
-### Turning Off
+### For the Last Time (Turning Off)
 
 Three ways.
 - A) Remove NameWhitelist jar file from `mods/`. Restart the server.
