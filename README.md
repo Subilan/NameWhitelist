@@ -21,9 +21,9 @@ Some highlights of NameWhitelist includes:
 - Open source, thus extensible. As you can see, the code is quite simple, thanks to Architectury API. If something is in your mind, like "auto fetching the UUID from MOJANG server and write it into the file", just fork the repo, make your modification, and get your own tailored (by yourself) whitelist system!
 
 > [!CAUTION]
-> What NameWhitelist maintain is just a simple plain text file filled with the names of players, separated by returns `\n`. For now, it won't check the validity of the names (this does not hurt though, as it only plays when some player with of course valid username is trying to join the server).
->
 > Most importantly, as the list is static and no UUID information is recorded, the names will **NOT** be updated automatically after player changed his/her name. So manually removing the old name and adding the new name is required when something like this happens.
+>
+> What NameWhitelist maintain is just a simple plain text file filled with the names of players, separated by returns `\n`. For now, it won't check the validity of the names (this does not hurt though, as it only plays when some player with of course valid username is trying to join the server), either.
 
 ## Version & Dependency
 
