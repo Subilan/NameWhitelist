@@ -1,4 +1,6 @@
-# NameWhitelist
+# NameWhitelist [![Java CI with Gradle](https://github.com/Subilan/NameWhitelist/actions/workflows/gradle.yml/badge.svg)](https://github.com/Subilan/NameWhitelist/actions/workflows/gradle.yml)
+
+Download latest build: [Forge](https://nightly.link/Subilan/NameWhitelist/workflows/gradle/main/forge.zip) | [Fabric](https://nightly.link/Subilan/NameWhitelist/workflows/gradle/main/fabric.zip) | Bukkit
 
 **NameWhitelist** is the _super-simplified_ version of the vanilla whitelist. It checks if the name of the player who trying to join the server is on the list, and forcefully disconnect (like _kick_, or something) players not listed actively.
 
