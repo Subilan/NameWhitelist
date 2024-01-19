@@ -7,7 +7,7 @@ import net.minecraft.commands.Commands;
 
 public class CommandManager {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher, Commands.CommandSelection selection) {
-        dispatcher.register(Commands.literal("wl")
+        dispatcher.register(Commands.literal("nwl")
                 .requires(source -> source.getServer().isSingleplayer() || source.hasPermission(2))
                 .then(
                         Commands.literal("add")
