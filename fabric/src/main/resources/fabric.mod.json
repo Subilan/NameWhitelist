@@ -8,14 +8,14 @@
     "Subilan"
   ],
   "contact": {
-    "homepage": "https://github.com/seatitanium/NameWhitelist",
-    "sources": "https://github.com/seatitanium/NameWhitelist"
+    "homepage": "https://github.com/Subilan/NameWhitelist",
+    "sources": "https://github.com/Subilan/NameWhitelist"
   },
-  "license": "Insert License Here",
+  "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "cc.seati.NameWhitelist.fabric.NameWhitelistFabric"
+      "cc.seati.NameWhitelist.fabric.Main"
     ]
   },
   "depends": {
