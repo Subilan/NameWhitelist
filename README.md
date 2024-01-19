@@ -8,6 +8,8 @@ Download latest build: [Forge](https://nightly.link/Subilan/NameWhitelist/workfl
 
 ### For the First Time (Installation)
 
+This mod is for server-side only.
+
 1. Put NameWhitelist and Architectury API jar file into `mods/`.
 2. Edit `server.properties`, turn the vanilla whitelist off. This is not required. Yoo can leave it on if you have some _special_ purpose ;)
 3. (Re)start server, ***OR***, manually create a file named `name-whitelist.txt` in the same directory as the vanilla whitelist, put the names in it, and (re)start the server.
