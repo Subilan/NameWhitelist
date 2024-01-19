@@ -15,9 +15,9 @@ public class WhitelistFile {
 
     public static void init() {
         try {
-           if (file.createNewFile()) {
-               Main.LOGGER.info("Successfully created empty name whitelist at " + file.getAbsolutePath() + ".");
-           }
+            if (file.createNewFile()) {
+                Main.LOGGER.info("Successfully created empty name whitelist at " + file.getAbsolutePath() + ".");
+            }
         } catch (IOException e) {
             e.printStackTrace();
             Main.LOGGER.error("Unable to initialize whitelist file. The function won't work properly.");
@@ -29,16 +29,48 @@ public class WhitelistFile {
         init();
     }
 
+    public static BufferedReader getReader() throws IOException {
+        return Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8);
+    }
+
+    public static BufferedWriter getWriter() throws IOException {
+        return Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8);
+    }
+
+    public static void toggleStatus() {
+        List<String> toWrite = getPlayers();
+        try (BufferedWriter writer = getWriter()) {
+            if (!isDisabled()) toWrite.add(0, "#disabled");
+            writer.write(String.join("\n", toWrite));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Main.LOGGER.error("Unable to open whitelist file. The function won't work properly.");
+        }
+    }
+
+    public static boolean isDisabled() {
+        try (BufferedReader reader = getReader()) {
+            String line = reader.readLine();
+            if (line == null) return false;
+            return line.equalsIgnoreCase("#disabled") || line.equalsIgnoreCase("# disabled");
+        } catch (IOException e) {
+            e.printStackTrace();
+            Main.LOGGER.error("Unable to open whitelist file. The function won't work properly.");
+            return true;
+        }
+    }
+
     public static List<String> getPlayers() {
         ArrayList<String> result = new ArrayList<>();
-        try (BufferedReader reader = Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8)) {
+        try (BufferedReader reader = getReader()) {
             String line = reader.readLine();
             while (line != null) {
-                result.add(line);
+                if (!line.equalsIgnoreCase("#disabled") && !line.equalsIgnoreCase("# disabled")) result.add(line);
                 line = reader.readLine();
             }
         } catch (IOException e) {
             e.printStackTrace();
+            Main.LOGGER.error("Unable to open whitelist file. The function won't work properly.");
             return new ArrayList<>();
         }
         return result;
@@ -48,9 +80,10 @@ public class WhitelistFile {
         if (containsName(name)) return;
         List<String> currentList = getPlayers();
         currentList.add(name);
-        try (BufferedWriter writer = Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8)) {
+        try (BufferedWriter writer = getWriter()) {
             writer.write(String.join("\n", currentList));
         } catch (IOException e) {
+            Main.LOGGER.error("Unable to open whitelist file. The function won't work properly.");
             e.printStackTrace();
         }
     }
@@ -59,9 +92,10 @@ public class WhitelistFile {
         if (!containsName(name)) return;
         List<String> currentList = getPlayers();
         currentList.remove(name);
-        try (BufferedWriter writer = Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8)) {
+        try (BufferedWriter writer = getWriter()) {
             writer.write(String.join("\n", currentList));
         } catch (IOException e) {
+            Main.LOGGER.error("Unable to open whitelist file. The function won't work properly.");
             e.printStackTrace();
         }
     }

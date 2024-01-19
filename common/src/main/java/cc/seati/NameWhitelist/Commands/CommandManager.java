@@ -27,6 +27,14 @@ public class CommandManager {
                         Commands.literal("reload")
                                 .executes(ctx -> ReloadCommand.exec(ctx.getSource()))
                 )
+                .then(
+                        Commands.literal("enable")
+                                .executes(ctx -> EnableCommand.exec(ctx.getSource()))
+                )
+                .then(
+                        Commands.literal("disable")
+                                .executes(ctx -> DisableCommand.exec(ctx.getSource()))
+                )
         );
     }
 }
