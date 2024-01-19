@@ -16,16 +16,18 @@ If NameWhitelist is enabled, players with names that are not listed in `name-whi
 
 Three ways.
 - A) Remove NameWhitelist jar file from `mods/`. Restart the server.
-- B) Put "#disabled" in the first line of `name-whitelist.txt`. Execute `wl reload`.
+- B) Put "#disabled" in the first line of `name-whitelist.txt`. Execute `nwl reload`.
 - C) Execute `wl disable` in game or console.
 
 ### Commands
 
-- `wl add <PlayerNames...>` - Add player names to `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
-- `wl remove <PlayerNames...>` - Remove player names from  `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
-- `wl reload` - Reload. Read conteng of `name-whitelist.txt` again.
-- `wl disable` - Disable whitelist.
-- `wl enable` - Enable whitelist.
+Commands start with `nwl` (name white list).
+
+- `nwl add <PlayerNames...>` - Add player names to `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
+- `nwl remove <PlayerNames...>` - Remove player names from  `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
+- `nwl reload` - Reload. Read conteng of `name-whitelist.txt` again.
+- `nwl disable` - Disable whitelist.
+- `nwl enable` - Enable whitelist.
 
 ## Reason
 
