@@ -1,10 +1,14 @@
-# NameWhitelist
+# NameWhitelist [![Java CI with Gradle](https://github.com/Subilan/NameWhitelist/actions/workflows/gradle.yml/badge.svg)](https://github.com/Subilan/NameWhitelist/actions/workflows/gradle.yml)
+
+Download latest build: [Forge](https://nightly.link/Subilan/NameWhitelist/workflows/gradle/main/forge.zip) | [Fabric](https://nightly.link/Subilan/NameWhitelist/workflows/gradle/main/fabric.zip) | Bukkit
 
 **NameWhitelist** is the _super-simplified_ version of the vanilla whitelist. It checks if the name of the player who trying to join the server is on the list, and forcefully disconnect (like _kick_, or something) players not listed actively.
 
 ## Usage
 
 ### For the First Time (Installation)
+
+This mod is for server-side only.
 
 1. Put NameWhitelist and Architectury API jar file into `mods/`.
 2. Edit `server.properties`, turn the vanilla whitelist off. This is not required. Yoo can leave it on if you have some _special_ purpose ;)
@@ -16,16 +20,18 @@ If NameWhitelist is enabled, players with names that are not listed in `name-whi
 
 Three ways.
 - A) Remove NameWhitelist jar file from `mods/`. Restart the server.
-- B) Put "#disabled" in the first line of `name-whitelist.txt`. Execute `wl reload`.
+- B) Put "#disabled" in the first line of `name-whitelist.txt`. Execute `nwl reload`.
 - C) Execute `wl disable` in game or console.
 
 ### Commands
 
-- `wl add <PlayerNames...>` - Add player names to `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
-- `wl remove <PlayerNames...>` - Remove player names from  `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
-- `wl reload` - Reload. Read conteng of `name-whitelist.txt` again.
-- `wl disable` - Disable whitelist.
-- `wl enable` - Enable whitelist.
+Commands start with `nwl` (name white list).
+
+- `nwl add <PlayerNames...>` - Add player names to `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
+- `nwl remove <PlayerNames...>` - Remove player names from  `name-whitelist.txt`. The names are separated by space ` `. Case insensitive.
+- `nwl reload` - Reload. Read conteng of `name-whitelist.txt` again.
+- `nwl disable` - Disable whitelist.
+- `nwl enable` - Enable whitelist.
 
 ## Reason
 
