@@ -11,6 +11,8 @@ loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
+version = rootProject.mod_version + "-fabricapi-" + rootProject.fabric_api_version
+
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
