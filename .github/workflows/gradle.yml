@@ -32,12 +32,12 @@ jobs:
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: build
-    - name: Upload Artifacts
+    - name: Upload Forge Artifacts
       uses: actions/upload-artifact@v4.2.0
       with:
         name: forge
         path: forge/bin/libs/namewhitelist-forge*
-    - name: Upload Artifacts
+    - name: Upload Fabric Artifacts
       uses: actions/upload-artifact@v4.2.0
       with:
         name: fabric
