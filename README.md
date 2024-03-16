@@ -59,7 +59,7 @@ Some highlights of NameWhitelist includes:
 ## Version & Dependency
 
 - Java 1.16.5+
-  - Both Forge and Fabric is supported (the full release will come out before Jan 22, 2024)
+  - Both Forge and Fabric are supported.
 - Dependency: [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api)
 
 ## License
